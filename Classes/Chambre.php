@@ -7,14 +7,17 @@ Class Chambre{
 	private int $_nbrLit;
 	private float $_prix;
 	private bool $_wifi;
+	private Hotel $_hotel;
 
-	public function __construct(int $numero, bool $_disponibilite, int $nbrLit, float $prix, bool $wifi){
+	public function __construct(int $numero, bool $_disponibilite, int $nbrLit, float $prix, bool $wifi,Hotel $hotel){
 
 		$this->_numero = $numero;
 		$this->_disponibilite = $_disponibilite;
 		$this->_nbrLit = $nbrLit;
 		$this->_prix = $prix;
 		$this->_wifi = $wifi;
+		$this->_hotel = $hotel;
+		$this->_hotel->ajouterChambre($this);
 
 	}
 

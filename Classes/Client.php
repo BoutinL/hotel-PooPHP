@@ -4,11 +4,13 @@ Class Client{
 
 	private string $_nom;
 	private string $_prenom;
+	private array $_reservations;
 
 	public function __construct(string $nom, string $prenom){
 
 		$this->_nom = $nom;
 		$this->_prenom = $prenom;
+		$this->_reservations = [];
 
 	}
 
@@ -27,6 +29,22 @@ Class Client{
 	public function setPrenom(string $prenom){
 		$this->_prenom = $prenom;
 	}
+
+	public function getReservations(){
+		return $this->_reservations;
+	}
+
+	public function setReservations($_reservations){
+		$this->_reservations = $_reservations;
+	}
+
+	// Méthode qui ajoute une réservation à son client
+
+	public function ajouterReservation(Reservation $reservation){
+		array_push($this->_reservations, $reservation);
+	}
+
+	// Méthode pour afficher les réservations d'un client
 
 	// toString
 
