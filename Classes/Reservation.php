@@ -34,6 +34,23 @@ Class Reservation{
 		$this->_dateFin = $dateFin;
 	}
 
+	public function getClient(){
+		return $this->_client;
+	}
+
+	public function setClient(string $client){
+		$this->_client = $client;
+	}
+
+	public function getHotel(){
+		return $this->_hotel;
+	}
+
+	public function setHotel(string $hotel){
+		$this->_hotel = $hotel;
+	}
+
+
 	// toString
 
 	public function __toString(){
