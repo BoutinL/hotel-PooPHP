@@ -54,17 +54,17 @@ Class Hotel{
 
 	// toString
 
-	private function listingReservations() : string
-	{
-		$result = "-------------------------<br/>";
-		foreach($this->_reservations as $reservation){
-			$result .= $reservation ."<br/>";
-		}
-		$result .= "-------------------------";
-		return $result;
-	} 
+	// private function listingReservations() : string
+	// {
+	// 	$result = "-------------------------<br/>";
+	// 	foreach($this->_reservations as $reservation){
+	// 		$result .= $reservation ."<br/>";
+	// 	}
+	// 	$result .= "-------------------------";
+	// 	return $result;
+	// } 
 
-	public function __toString(){
-		return "Réservations de l'hotel: ".$this->_nom."<br/>".$this->getReservations()->getClient()->getNom()." ".$this->listingReservations();
-	}
+	// public function __toString(){
+	// 	return "Réservations de l'hotel: ".$this->_nom."<br/>".$this->getReservations()->getClient()->getNom()." ".$this->listingReservations();
+	// }
 }

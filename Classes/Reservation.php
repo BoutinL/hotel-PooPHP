@@ -54,7 +54,7 @@ Class Reservation{
 	// toString
 
 	public function __toString(){
-		return $this->_dateDebut->format("d-m-Y")." ".$this->_dateFin->format("d-m-Y")."<br/>";
+		return "Réservations de l'hotel: ".$this->getReservations()->gethotel()->getNom()."<br/>".$this->getReservations()->getClient()->getNom()." ".$this->listingReservations();
 	}
 
 }
