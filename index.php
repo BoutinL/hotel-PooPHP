@@ -34,4 +34,3 @@ $reservation2 = new Reservation("01-04-2021", "17-04-2021", $client2, $chambre1)
 // Client: afficher ses infos(nom/prenom) le nom de l'hotel, sa chambre avec le nombre de lits, le prix, la wifi ainsi que les dates.
 
 echo $hotel1;
-echo $chambre1->getNumero();

@@ -8,6 +8,7 @@ Class Chambre{
 	private float $_prix;
 	private bool $_wifi;
 	private Hotel $_hotel;
+	private array $_reservations;
 
 	public function __construct(int $numero, bool $_disponibilite, int $nbrLit, float $prix, bool $wifi, Hotel $hotel){
 
@@ -18,6 +19,7 @@ Class Chambre{
 		$this->_wifi = $wifi;
 		$this->_hotel = $hotel;
 		$this->_hotel->ajouterChambre($this);
+		$this->_reservations = [];
 
 	}
 
@@ -61,10 +63,33 @@ Class Chambre{
 		$this->_wifi = $wifi;
 	}
 	
+	public function getReservations(){
+		return $this->_reservations;
+	}
+
+	public function setReservations(array $reservation){
+		$this->_reservations = $reservation;
+	}
+
+	public function getHotel(){
+		return $this->_hotel;
+	}
+
+	// Méthode qui ajoute une réservation à une chambre
+
+	public function ajouterReservation(Reservation $reservation){
+		array_push($this->_reservations, $reservation);
+	}
+	
 	// toString
 
 	public function __toString(){
 		return $this->_numero." ".$this->_disponibilite." ".$this->_nbrLit." ".$this->_prix." ".$this->_wifi;
 	}
+
+	public function infosDetaillees() {
+		return $this->_disponibilite." ".$this->_nbrLit." ".$this->_prix." ".$this->_wifi;
+	}
+
 
 }

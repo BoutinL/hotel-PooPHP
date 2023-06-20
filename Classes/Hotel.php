@@ -32,25 +32,16 @@ Class Hotel{
 		$this->_adresse = $adresse;
 	}
 
-	public function getReservations(){
-		return $this->_reservations;
-	}
-
-	public function setReservations(array $reservation){
-		$this->_reservations = $reservation;
-	}
-
-	// Méthode qui ajoute une réservation à son hotel
-
-	public function ajouterReservation(Reservation $reservation){
-		array_push($this->_reservations, $reservation);
-	}
-
 	// Méthode qui ajoute une chambre à son hotel
 
 	public function ajouterChambre(Chambre $chambre){
 		array_push($this->_chambres, $chambre);
 	}
+
+	public function ajouterReservation(Reservation $reservation){
+		array_push($this->_reservations, $reservation);
+	}
+	
 
 	// toString
 

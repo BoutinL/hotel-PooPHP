@@ -5,19 +5,17 @@ Class Reservation{
 	private DateTime $_dateDebut;
 	private DateTime $_dateFin;
 	private Client $_client;
-	private Hotel $_hotel;
 	private Chambre $_chambre;
 
-	public function __construct(string $dateDebut, string $dateFin, Client $client, Hotel $hotel, Chambre $chambre){
+	public function __construct(string $dateDebut, string $dateFin, Client $client, Chambre $chambre){
 
 		$this->_dateDebut = new DateTime($dateDebut);
 		$this->_dateFin = new DateTime($dateFin);
 		$this->_client = $client;
-		$this->_hotel = $hotel;
 		$this->_chambre = $chambre;
 		$this->_client->ajouterReservation($this);
-		$this->_hotel->ajouterReservation($this);
-
+		$this->_chambre->ajouterReservation($this);
+		$this->_chambre->getHotel()->ajouterReservation($this);
 	}
 
 	public function getDateDebut(){
@@ -63,7 +61,7 @@ Class Reservation{
 	// toString
 
 	public function __toString(){
-		return $this->_client." ".$this->_dateDebut->format("d-m-Y")." au ". $this->_dateFin->format("d-m-Y");
+		return $this->_client." a réservé la chambre n°". $this->_chambre->getNumero(). " du ".$this->_dateDebut->format("d-m-Y")." au ". $this->_dateFin->format("d-m-Y");
 	}
 
 }
