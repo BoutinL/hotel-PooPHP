@@ -9,7 +9,7 @@ Class Chambre{
 	private bool $_wifi;
 	private Hotel $_hotel;
 
-	public function __construct(int $numero, bool $_disponibilite, int $nbrLit, float $prix, bool $wifi,Hotel $hotel){
+	public function __construct(int $numero, bool $_disponibilite, int $nbrLit, float $prix, bool $wifi, Hotel $hotel){
 
 		$this->_numero = $numero;
 		$this->_disponibilite = $_disponibilite;

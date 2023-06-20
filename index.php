@@ -25,12 +25,13 @@ $client1 = new Client("Murmann","Micka");
 $client2 = new Client("Boutin","Loïc");
 
 // Reservations
-$reservation1 = new Reservation("11-03-2021", "15-03-2021", $client1, $hotel1);
-$reservation2 = new Reservation("01-04-2021", "17-04-2021", $client2, $hotel2);
+$reservation1 = new Reservation("11-03-2021", "15-03-2021", $client1, $hotel1, $chambre1);
+$reservation2 = new Reservation("01-04-2021", "17-04-2021", $client2, $hotel1, $chambre1);
 
 // A FAIRE 
 // Hotel: Afficher ses infos (nom/adresse, nombre de chambres total/réservés/disponibles)
 // Réservation: Afficher le nom de l'hotel ainsi que ses réservations(nom/prénom client, numéro chambre, dates), préciser si aucune réservation.
 // Client: afficher ses infos(nom/prenom) le nom de l'hotel, sa chambre avec le nombre de lits, le prix, la wifi ainsi que les dates.
 
-echo $reservation1;
+echo $hotel1;
+

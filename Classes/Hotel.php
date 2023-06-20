@@ -65,6 +65,6 @@ Class Hotel{
 	} 
 
 	public function __toString(){
-		return "Réservations de l'hotel: ".$this->_nom."<br/>".$this->getReservations()->getClient()->getNom()." ".$this->listingReservations();
+		return "Réservations de l'hotel: ".$this->_nom."<br>".$this->listingReservations();
 	}
 }
