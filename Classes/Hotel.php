@@ -15,7 +15,6 @@ Class Hotel{
 		$this->_chambres = [];
 
 	}
-	
 
 	public function getNom(){
 		return $this->_nom;
@@ -46,6 +45,12 @@ Class Hotel{
 	}
 
 	// Méthode pour afficher les réservations d'un hotel
+
+	
+	public function afficherReservationsHotel(){
+
+	}
+
 
 	// toString
 
