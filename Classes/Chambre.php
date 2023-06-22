@@ -80,15 +80,15 @@ Class Chambre{
 	public function ajouterReservation(Reservation $reservation){
 		array_push($this->_reservations, $reservation);
 	}
+
+	public function infoChambre() {
+		return $this->_nbrLit." lit(s) - ".$this->_prix." € wifi: ".$this->_wifi;
+	}
 	
 	// toString
 
 	public function __toString(){
 		return $this->_numero." ".$this->_disponibilite." ".$this->_nbrLit." ".$this->_prix." ".$this->_wifi;
-	}
-
-	public function infosDetaillees() {
-		return $this->_disponibilite." ".$this->_nbrLit." ".$this->_prix." ".$this->_wifi;
 	}
 
 }

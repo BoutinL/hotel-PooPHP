@@ -42,7 +42,6 @@ Class Hotel{
 		array_push($this->_reservations, $reservation);
 	}
 	
-
 	// toString
 
 	private function listingReservations() : string
