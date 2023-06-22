@@ -51,11 +51,12 @@ Class Hotel{
 		foreach($this->_reservations as $reservation){
 			$result .= $reservation ."<br/>";
 		}
-		$result .= "-------------------------";
+		$result .= "-------------------------<br/>";
 		return $result;
 	} 
 
 	public function __toString(){
-		return "Réservations de l'hotel: ".$this->_nom."<br>".$this->listingReservations();
+		return "Réservations de l'hotel: ".$this->_nom."<br>".count($this->_reservations)." RESERVATIONS<br/>".$this->listingReservations();
 	}
+	
 }

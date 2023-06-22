@@ -91,5 +91,4 @@ Class Chambre{
 		return $this->_disponibilite." ".$this->_nbrLit." ".$this->_prix." ".$this->_wifi;
 	}
 
-
 }

@@ -61,7 +61,7 @@ Class Reservation{
 	// toString
 
 	public function __toString(){
-		return $this->_client." a réservé la chambre n°". $this->_chambre->getNumero(). " du ".$this->_dateDebut->format("d-m-Y")." au ". $this->_dateFin->format("d-m-Y");
+		return $this->_client." - Chambre : ". $this->_chambre->getNumero(). " du ".$this->_dateDebut->format("d-m-Y")." au ". $this->_dateFin->format("d-m-Y");
 	}
 
 }
