@@ -82,7 +82,9 @@ Class Chambre{
 	}
 
 	public function infoChambre() {
-		return $this->_nbrLit." lit(s) - ".$this->_prix." € wifi: ".$this->_wifi;
+		// ternaire toujours depuis une variable
+		$wifi = ($this->_wifi==true) ? 'oui' : 'non';
+		return $this->_nbrLit." lit(s) - ".$this->_prix." € wifi: ".$wifi;
 	}
 	
 	// toString

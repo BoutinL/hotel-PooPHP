@@ -38,7 +38,3 @@ $reservation3 = new Reservation("21-08-2021", "06-09-2021", $client2, $chambre4)
 echo $hotel1;
 
 echo $client1->afficherReservationsClient();
-
-echo $chambre1->infoChambre();
-
-var_dump()

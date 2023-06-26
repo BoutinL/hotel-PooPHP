@@ -59,7 +59,7 @@ Class Client{
 	{
 		$result = "-------------------------<br/>";
 		foreach($this->_reservations as $reservation){
-			$result .= $reservation."<br/>";
+			$result .= $reservation." (".$reservation->getChambre()->infoChambre().")<br/>";
 		}
 		$result .= "-------------------------<br/>";
 		return $result;
