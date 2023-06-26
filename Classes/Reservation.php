@@ -58,20 +58,10 @@ Class Reservation{
 		$this->_chambre = $chambre;
 	}
 
-	// méthode calcule le prix d'une réservation
-
-	public function calculTotalChambres(){
-		$prixTotal = "";
-		foreach($this->_reservations as $reservation){
-			$prixTotal .= $reservation->getChambre()->getPrix()."<br/>";
-		}
-		return $prixTotal;
-	}
-
 	// toString
 
 	public function __toString(){
-		return $this->_client." - Chambre : ". $this->_chambre->getNumero(). " du ".$this->_dateDebut->format("d-m-Y")." au ". $this->_dateFin->format("d-m-Y");
+		return "Chambre: ". $this->_chambre->getNumero(). " du ".$this->_dateDebut->format("d-m-Y")." au ". $this->_dateFin->format("d-m-Y");
 	}
 
 }

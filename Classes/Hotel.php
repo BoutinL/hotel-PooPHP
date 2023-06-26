@@ -75,7 +75,7 @@ Class Hotel{
 	{
 		$result = "";
 		foreach($this->_reservations as $reservation){
-			$result .= $reservation ."<br/>";
+			$result .=$reservation->getClient()->getNom()." ".$reservation->getClient()->getPrenom()." - ".$reservation ."<br/>";
 		}
 		$result .= "-------------------------<br/>";
 		return $result;
