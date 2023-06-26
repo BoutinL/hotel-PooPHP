@@ -47,6 +47,14 @@ Class Client{
 		$this->_chambre = $chambre;
 	}
 
+	public function getReservation(){
+		return $this->_reservation;
+	}
+
+	public function setReservation(Reservation $reservation){
+		$this->_reservation = $reservation;
+	}
+
 	// Méthode qui ajoute une réservation à son client
 
 	public function ajouterReservation(Reservation $reservation){
@@ -61,22 +69,22 @@ Class Client{
 		foreach($this->_reservations as $reservation){
 			$result .= "Hotel: ".$reservation->getChambre()->getHotel()->getNom()." / ".$reservation." (".$reservation->getChambre()->infoChambre().")<br/>";
 		}
-		$result .= "-------------------------<br/>";
+		$result .= "";
 		return $result;
 	} 
 
 	public function afficherReservationsClient(){
-		return "Réservations de ".$this->_prenom." ".$this->_nom."<br>".count($this->_reservations)." RESERVATIONS<br/>".$this->listingReservations()."<br/>Total: €";
+		return "Réservations de ".$this->_prenom." ".$this->_nom."<br>".count($this->_reservations)." RESERVATIONS<br/>".$this->listingReservations()."<br/>Total: ".$this->calculTotalJournees()."€";
 	}
 
-	// Méthode pour calculer 
+	// Méthode pour calculer le total de journées reservées
 
 	public function calculTotalJournees(){
 		$total = 0;
 		foreach($this->_reservations as $reservation){
-			$total += $reservation->getPrix();
+			$total += $reservation->calculPrix();
 		}
-		return $prixTotalReservation;
+		return $total;
 	}
 
 	// toString

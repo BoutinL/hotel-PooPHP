@@ -16,6 +16,7 @@ Class Reservation{
 		$this->_client->ajouterReservation($this);
 		$this->_chambre->ajouterReservation($this);
 		$this->_chambre->getHotel()->ajouterReservation($this);
+		$this->_chambre->getPrix();
 	}
 
 	public function getDateDebut(){
@@ -56,6 +57,14 @@ Class Reservation{
 
 	public function setChambre(string $chambre){
 		$this->_chambre = $chambre;
+	}
+
+	// Méthode pour calculer le prix d'un réservation
+	
+	public function calculPrix(){
+	$datedif = date_diff($this->getDateDebut(),$this->getDateFin())->d;
+		$total = $this->_chambre->getPrix()*$datedif;
+		return $total;
 	}
 
 	// toString
