@@ -91,5 +91,5 @@ Class Chambre{
 
 	public function __toString(){
 		return $this->_numero." ".$this->_disponibilite." ".$this->_nbrLit." ".$this->_prix." ".$this->_wifi;
-	}
+	} 
 }
