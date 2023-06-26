@@ -13,11 +13,11 @@ $hotel2 = new Hotel("Regent **** Paris", "75000 Paris");
 $chambre1 = new Chambre(1, true, 1, 80, false, $hotel1);
 $chambre2 = new Chambre(2, false, 2, 120, false, $hotel1);
 $chambre3 = new Chambre(3, true, 3, 140, true, $hotel1);
-$chambre4 = new Chambre(3, false, 4, 160, true, $hotel1);
+$chambre4 = new Chambre(3, true, 4, 160, true, $hotel1);
 
-$chambre5 = new Chambre(1, true, 1, 80, false, $hotel2);
+$chambre5 = new Chambre(1, false, 1, 80, false, $hotel2);
 $chambre6 = new Chambre(2, false, 2, 120, false, $hotel2);
-$chambre7 = new Chambre(3, true, 3, 140, true, $hotel2);
+$chambre7 = new Chambre(3, false, 3, 140, true, $hotel2);
 $chambre8 = new Chambre(3, false, 4, 160, true, $hotel2);
 
 // Clients
@@ -34,6 +34,8 @@ $reservation3 = new Reservation("21-08-2021", "06-09-2021", $client2, $chambre4)
 // Hotel: Afficher ses infos (nom/adresse, nombre de chambres total/réservés/disponibles)
 // Réservation: Afficher le nom de l'hotel ainsi que ses réservations(nom/prénom client, numéro chambre, dates), préciser si aucune réservation.
 // Client: afficher ses infos(nom/prenom) le nom de l'hotel, sa chambre avec le nombre de lits, le prix, la wifi ainsi que les dates.
+
+echo $hotel1->listingStats();
 
 echo $hotel1;
 

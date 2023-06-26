@@ -58,6 +58,9 @@ Class Reservation{
 		$this->_chambre = $chambre;
 	}
 
+	// méthode calcule le prix d'une réservation
+
+	
 	// toString
 
 	public function __toString(){

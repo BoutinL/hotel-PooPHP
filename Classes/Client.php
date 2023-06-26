@@ -65,8 +65,16 @@ Class Client{
 		return $result;
 	} 
 
+	private function prixTotal () : string {
+		$prixTotal = "";
+		foreach($this->_reservations as $reservation){
+			$prixTotal .= $reservation->getChambre()->getPrix()."<br/>";
+		}
+		return $prixTotal;
+	}
+
 	public function afficherReservationsClient(){
-		return "Réservations de ".$this->_prenom." ".$this->_nom."<br>".count($this->_reservations)." RESERVATIONS<br/>".$this->listingReservations();
+		return "Réservations de ".$this->_prenom." ".$this->_nom."<br>".count($this->_reservations)." RESERVATIONS<br/>".$this->listingReservations()."<br/>Total: €";
 	}
 
 	// toString
