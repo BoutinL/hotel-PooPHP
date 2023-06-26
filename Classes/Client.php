@@ -57,9 +57,9 @@ Class Client{
 
 	private function listingReservations() : string
 	{
-		$result = "-------------------------<br/>";
+		$result = "";
 		foreach($this->_reservations as $reservation){
-			$result .= $reservation." (".$reservation->getChambre()->infoChambre().")<br/>";
+			$result .= "Hotel: ".$reservation->getChambre()->getHotel()->getNom()." / ".$reservation." (".$reservation->getChambre()->infoChambre().")<br/>";
 		}
 		$result .= "-------------------------<br/>";
 		return $result;

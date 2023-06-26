@@ -60,7 +60,14 @@ Class Reservation{
 
 	// méthode calcule le prix d'une réservation
 
-	
+	public function calculTotalChambres(){
+		$prixTotal = "";
+		foreach($this->_reservations as $reservation){
+			$prixTotal .= $reservation->getChambre()->getPrix()."<br/>";
+		}
+		return $prixTotal;
+	}
+
 	// toString
 
 	public function __toString(){

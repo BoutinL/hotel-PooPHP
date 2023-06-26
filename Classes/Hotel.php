@@ -73,7 +73,7 @@ Class Hotel{
 
 	private function listingReservations() : string
 	{
-		$result = "-------------------------<br/>";
+		$result = "";
 		foreach($this->_reservations as $reservation){
 			$result .= $reservation ."<br/>";
 		}
