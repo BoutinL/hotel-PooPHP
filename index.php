@@ -29,8 +29,29 @@ $reservation1 = new Reservation("11-03-2021", "15-03-2021", $client1, $chambre1)
 $reservation2 = new Reservation("01-04-2021", "17-04-2021", $client1, $chambre3);
 $reservation3 = new Reservation("21-08-2021", "06-09-2021", $client2, $chambre4);
 
+// Afficher tableau
+
 echo $hotel1->listingStats();
 
 echo $hotel1;
 
-echo $client1->afficherReservationsClient();
+echo $client1 -> afficherReservationsClient();
+
+echo $hotel1 -> afficherStatutsChambre();
+
+?>
+
+<table>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><td>
+        <td><td>
+        <td><td>
+        <td><td>
+    </tr>
+</table><?= $var ?>

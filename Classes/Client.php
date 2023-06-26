@@ -74,7 +74,7 @@ Class Client{
 	} 
 
 	public function afficherReservationsClient(){
-		return "Réservations de ".$this->_prenom." ".$this->_nom."<br>".count($this->_reservations)." RESERVATIONS<br/>".$this->listingReservations()."<br/>Total: ".$this->calculTotalJournees()."€";
+		return "Réservations de ".$this->_prenom." ".$this->_nom."<br>".count($this->_reservations)." RESERVATIONS<br/>".$this->listingReservations()."<br/>Total: ".$this->calculTotalJournees()."€<br/><br/>";
 	}
 
 	// Méthode pour calculer le total de journées reservées

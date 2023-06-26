@@ -69,6 +69,15 @@ Class Hotel{
 		return $this->_nom."<br/>".$this->_adresse."<br/>Nombre de chambres: ".count($this->_chambres)."<br/>Nombre de chambres réservées :".$this->nbrChambreIndispo()."<br/>Nombre de chambres dispo: ".$this->nbrChambreDispo()."<br/>-------------------------<br/>";
 	}
 
+	// Méthode pour afficher le statut des chambres d'un hotel
+
+	public function afficherStatutsChambre() {
+		echo "Status des chambres de ".$this->getNom();
+		foreach($this->_reservations as $reservation){
+
+		}
+	}
+
 	// toString
 
 	private function listingReservations() : string
