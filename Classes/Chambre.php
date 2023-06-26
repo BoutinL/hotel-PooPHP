@@ -84,7 +84,7 @@ Class Chambre{
 	public function infoChambre() {
 		// ternaire toujours depuis une variable
 		$wifi = ($this->_wifi==true) ? 'oui' : 'non';
-		return $this->_nbrLit." lit(s) - ".$this->_prix." € wifi: ".$wifi;
+		return $this->_nbrLit." lit(s) - ".$this->_prix." € - wifi: ".$wifi;
 	}
 	
 	// toString
@@ -92,5 +92,5 @@ Class Chambre{
 	public function __toString(){
 		return $this->_numero." ".$this->_disponibilite." ".$this->_nbrLit." ".$this->_prix." ".$this->_wifi;
 	} 
-	
+
 }
