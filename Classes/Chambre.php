@@ -27,7 +27,7 @@ Class Chambre{
 		return $this->_numero;
 	}
 
-	public function setNumero(int $numéro){
+	public function setNumero(int $numero){
 		$this->_numero = $numero;
 	}
 

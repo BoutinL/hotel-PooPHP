@@ -39,19 +39,3 @@ echo $client1 -> afficherReservationsClient();
 
 echo $hotel1 -> afficherStatutsChambre();
 
-?>
-
-<table>
-    <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <td><td>
-        <td><td>
-        <td><td>
-        <td><td>
-    </tr>
-</table><?= $var ?>
