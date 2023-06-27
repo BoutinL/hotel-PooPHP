@@ -74,14 +74,18 @@ Class Hotel{
 	public function afficherStatutsChambre(){
 		echo "Status des chambres de ".$this->getNom();
 		echo "<table>";
+		echo "<thead>";
 		echo "<tr>";
 		echo "<th>CHAMBRE</th><th>PRIX</th><th>WIFI</th><th>ETAT</th>";
+		echo "</tr>";
+		echo "</thead>";
+		echo "<tbody>";
 		foreach($this->_chambres as $chambre){
 			$chambreEtat = ($chambre->getDisponibilite()==true) ? 'DISPONIBLE' : 'RESERVEE';
 			$wifi = ($chambre->getDisponibilite()==true) ? 'OUI' : 'NON';
 			echo "<tr><td>Chambre ".$chambre->getNumero()."</td><td>".$chambre->getPrix()." €</td><td>".$wifi."</td><td>".$chambreEtat."</td></tr>";
 		}
-		echo "</tr>";
+		echo "</tbody>";
 		echo "<table/>";
 	}
 
