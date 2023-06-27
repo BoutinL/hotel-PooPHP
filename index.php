@@ -13,12 +13,12 @@ $hotel2 = new Hotel("Regent **** Paris", "75000 Paris");
 $chambre1 = new Chambre(1, true, 1, 80, false, $hotel1);
 $chambre2 = new Chambre(2, false, 2, 120, false, $hotel1);
 $chambre3 = new Chambre(3, true, 3, 140, true, $hotel1);
-$chambre4 = new Chambre(3, true, 4, 160, true, $hotel1);
+$chambre4 = new Chambre(4, true, 4, 160, true, $hotel1);
 
 $chambre5 = new Chambre(1, false, 1, 80, false, $hotel2);
 $chambre6 = new Chambre(2, false, 2, 120, false, $hotel2);
 $chambre7 = new Chambre(3, false, 3, 140, true, $hotel2);
-$chambre8 = new Chambre(3, false, 4, 160, true, $hotel2);
+$chambre8 = new Chambre(4, false, 4, 160, true, $hotel2);
 
 // Clients
 $client1 = new Client("Murmann","Micka");
@@ -31,7 +31,7 @@ $reservation3 = new Reservation("21-08-2021", "06-09-2021", $client2, $chambre4)
 
 // Afficher tableau
 
-echo $hotel1->listingStats();
+echo $hotel1 -> listingStats();
 
 echo $hotel1;
 
